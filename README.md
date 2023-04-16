@@ -1,5 +1,5 @@
 # MetaUni-Database
-Contains docker-compose.yml to build database  
+Contains docker-compose.yml to build database for MetaUni.  
 此文档帮助您使用Docker构建MetaUni项目中使用到的Database（目前包括MongoDB与SqlServer）  
 阅读文档前请先确保：  
 + 您使用的操作系统为Windows
