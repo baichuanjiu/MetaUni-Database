@@ -1,0 +1,13 @@
+docker compose up -d
+
+docker exec -it MongoDB mongosh -u admin -p Password123
+
+use metaUni
+
+# db.createUser({user:'admin',pwd:'Password123',roles:[{role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})
+
+# db.auth("admin","Password123")
+
+db.createUser({user:'zero',pwd:'Password123',roles:[{role:'readWrite',db:'metaUni'}]})
+
+db.auth("zero","Password123")
