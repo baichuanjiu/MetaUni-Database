@@ -1,0 +1,1 @@
+docker run -e "TZ=Asia/Shanghai" -e ACCEPT_EULA=Y -e SA_PASSWORD=Password123 --name SqlServer -p 1433:1433 -v ${pwd}\data:/var/opt/mssql/data -v ${pwd}\log:/var/opt/mssql/log -v ${pwd}\secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server
