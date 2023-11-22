@@ -1,0 +1,13 @@
+docker run -itd --name MongoDB -p 27017:27017 -e "TZ=Asia/Shanghai" -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=Password123 -v ${pwd}\data:/data/db -d mongo
+
+docker exec -it MongoDB mongosh -u admin -p Password123
+
+use metaUni
+
+# db.createUser({user:'admin',pwd:'Password123',roles:[{role:'userAdminAnyDatabase',db:'admin'},"readWriteAnyDatabase"]})
+
+# db.auth("admin","Password123")
+
+db.createUser({user:'zero',pwd:'Password123',roles:[{role:'readWrite',db:'metaUni'}]})
+
+db.auth("zero","Password123")
